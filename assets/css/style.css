@@ -27,14 +27,35 @@
 /*===========================
      01.COMMON css 
 ===========================*/
+
+
+@font-face {
+    font-family: 'irsans'; /*تعریف یک نام برای فونت*/
+    src: url('../fonts/irsans.eot'); /*اکسپلورر 9 به بعد*/
+    src: local('irsans'), /*بررسی نصب بودن فونت در سیستم کاربر*/
+    local('irsans'), /*برای برخی از مرورگرها مانند سافاری*/
+    url('../fonts/irsans.eot?#iefix') format('embedded-opentype'), /*هک برای اکسپلورر 8 و ماقبل*/
+    url('../fonts/irsans.woff') format('woff'), /*مرورگر های جدید*/
+    url('../fonts/irsans.ttf') format('truetype'), /*تمام مرورگرها به جزء اکسپلورر*/
+    url('../fonts/irsans.svg') format('svg'); /*نسخه های قدیمی سیستم عامل iOS*/
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
+
+
+
+
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,700|Lato:300,400,700&display=swap");
-@import url(iransans.css);
 body {
-  font-family: "IRANSans", "Lato", sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  color: #6A6972;
-  overflow-x: hidden; }
+    font-family: irsans;
+    font-weight: normal;
+    font-style: normal;
+    color: #6A6972;
+    overflow-x: hidden;
+}
 
 * {
   margin: 0;
@@ -76,10 +97,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "IRANSans", "Poppins", sans-serif;
-  font-weight: 700;
-  color: #2E2E2E;
-  margin: 0px; }
+    font-family: irsans;
+    font-weight: 700;
+    color: #2E2E2E;
+    margin: 0px;
+}
 
 h1 {
   font-size: 48px; }
@@ -611,7 +633,7 @@ p {
     transition: all 0.3s ease-out 0s;
     padding: 10px 0;
     position: relative;
-    font-family: "IRANSans", "Poppins", sans-serif; }
+    font-family: irsans; }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .navbar-nav .nav-item a {
         display: block;
@@ -994,7 +1016,7 @@ p {
   padding-bottom: 30px; }
   .video-content .dots {
     position: absolute;
-    left: -30px;
+    right: -30px;
     bottom: 0; }
 
 .video-wrapper {
@@ -1171,10 +1193,10 @@ p {
   .subscribe-form button {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     border-radius: 0;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     height: 65px;
     line-height: 65px;
     background: -webkit-linear-gradient(left, #fe8464 0%, #fe6e9a 50%, #fe8464 100%);
